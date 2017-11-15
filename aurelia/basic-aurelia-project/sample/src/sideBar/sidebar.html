@@ -1,0 +1,200 @@
+<template>
+  <!-- <nav class="navbar navbar-toggleable-md navbar-light header-menu-nav">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row"> 
+           <div class="col-md-12">
+              <a class="nav-link" href="#" >Core Widgets</a>
+            </div>
+            <div class="col-md-12">
+              <a class="nav-link" href="#" >Additional Widgets</a>
+            </div>
+            <div class="col-md-12">
+              <a class="nav-link"href="#" >Custom Widgets</a>
+            </div>
+            <div class="col-md-12">
+              <a class="nav-link" href="#">UI Style Guide</a>
+            </div>
+            <div class="col-md-12">
+              <a class="nav-link" href="#">Content</a>
+            </div>
+            <div class="col-md-12">
+                <a class="nav-link" href="#">Structure</a>
+            </div>
+            <div class="col-md-12">
+                <a class="nav-link" href="#">FAQ</a>
+            </div>      
+          </div>
+        </div>
+    </div>
+  </nav> -->
+  <!-- <ul class="nav navbar-nav mr-auto hidden-md-down navbar navbar-toggleable-md navbar-inverse flex-column navbar-collapse" id="navbarNav">
+    <div class="hidden-lg-up">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+      </li>
+    </div>
+   <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Disabled</a>
+    </li>
+    <li class="nav-item dropdown hidden-md-down">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <strong>Account</strong>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item"><strong>Register</strong></a>
+        <a href="#" class="dropdown-item"><strong>Profile</strong></a>
+        <a href="#" class="dropdown-item"><strong>My Jobs</strong></a>
+        <a href="#" class="dropdown-item"><strong>My Searches</strong></a>
+        <a href="#" class="dropdown-item"><strong>Employer Dashboard</strong></a>
+        <a href="#" class="dropdown-item"><strong>Login</strong></a>
+        <a href="#" class="dropdown-item">
+          <div class="dropdown-divider"></div>
+          <strong>Logout</strong>
+        </a>
+      </div>
+    </li>
+
+  </ul> -->
+  <nav class="navbar  navbar-toggleable-md navbar-light tt-header pl-60">
+    <span class="main-menu-btn">
+      <button class="navbar-toggler main-menu-box" type="button" data-toggle="collapse"
+       data-target="#time-tracking-main-nav" aria-controls="navbarSupportedContent" 
+       aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h2 class="route-title">Job Category</h2>
+      <button class="navbar-toggler action-menu-box float-right" type="button" data-toggle="collapse"
+       data-target="#time-tracking-action-nav" aria-controls="navbarSupportedContent" 
+       aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-dots-horizontal"></span>
+      </button>
+      <a class="nav-link mobile-view-navigation" href="#">
+        <i class="mdi mdi-arrow-left header-color mdi-24px " aria-hidden="true"></i>
+      </a>
+    </span>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+    <div class="nav navbar-light navbar-toggleable-sm">
+      <div class=" navbar-collapse collapse" id="time-tracking-action-nav">
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end mr-3" >
+          <li class="dropdown nav-item add-menu-toggle">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
+              <i class="mdi mdi-plus header-color mdi-24px " aria-hidden="true"></i>
+              <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="#">{{'label.team' | translate}}</a></li>
+            </ul>
+          </li>
+          <li class="dropdown nav-item notification-menu-toggle pointer">
+            <a class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="mdi mdi-bell header-color mdi-24px" aria-hidden="true">
+                <span *ngIf="notificationData.length>0" class="notification-signal"></span>
+              </i>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu snap-right notifications-dropdown">
+              <div class="notification-header">{{'label.notification' | translate}}<span *ngIf="notificationData.length>0" class="notification-signal">{{notificationData.length}}</span></div>
+              <ul class="on-viewed-notification-link list-unstyled">
+                <li class="notification-item" *ngFor="let eachData of notificationData">
+                  <a class="nav-link" routerLink="home" href="#" >
+                  </a>
+                </li>
+              </ul>
+            </ul>
+          </li>
+          <li class="dropdown nav-item admin-menu-toggle pointer">
+            <a class="dropdown-toggle nav-link pointer pt-2" data-toggle="dropdown">
+              <span class="header-color">
+                <img class="user-img" src="data:image/png;base64,{{user.picture}}">
+              </span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu snap-right">
+              <li><a class="nav-link" ></a></li>
+            </ul>
+          </li>
+        </ul>
+  </div>
+  </div>
+  </nav>
+  
+  
+  <nav class="nav navbar-light navbar-toggleable-sm tab-nav" *ngIf="isAuthenticated">
+    <div class=" navbar-collapse collapse flex-column mt-md-0 mt-4 pt-md-0 pt-4" id="time-tracking-main-nav">
+      <div class="main-menu">
+      <a class="logo-container" href="">
+        <div class="logo">
+          <svg style="width: 32px; height: 40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.21 37.17"><defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M20.38,32.91s-3.44-6.55-7.7-6.57S0,31.42,0,31.42l4.28-11s6.55-3.45,6.57-7.7S5.78,0,5.78,0L16.83,4.26s3.44,6.55,7.7,6.57S37.21,5.75,37.21,5.75l-4.27,11s-6.55,3.45-6.58,7.71,5.07,12.68,5.07,12.68ZM15.15,21.15a4.31,4.31,0,1,0,.89-6A4.31,4.31,0,0,0,15.15,21.15Z"/></g></g></svg>
+        </div>
+        <span class="logo-text"><strong>Time</strong>Ninja</span>
+      </a>
+      <ul>
+        <li>
+          <a class="nav-link" href="#">
+            <i class="mdi mdi-format-list-bulleted"></i><span class="nav-text">{{'label.menu.activity' | translate}}</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-link" href="#">
+            <i class="mdi mdi-clock"></i><span class="nav-text">{{'label.menu.hours' | translate}}</span>
+          </a>
+        </li>
+        <li class="">
+          <a class="nav-link">
+            <i class="mdi mdi-account-multiple"></i><span class="nav-text">{{'label.menu.staff' | translate}}</span>
+          </a>
+        </li>
+        <li class="" href="">
+          <a class="nav-link" [routerLink]="['projects']">
+            <i class="mdi mdi-briefcase"></i><span class="nav-text">{{'label.menu.projects' | translate}}</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="mdi mdi-poll"></i><span class="nav-text">{{'label.menu.reports' | translate}}</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="mdi mdi-settings"></i><span class="nav-text">{{'label.menu.settings' | translate}}</span>
+          </a>
+        </li>
+        <li>
+          <a  class="navbar-toggler" data-toggle="collapse" data-target="#time-tracking-main-nav"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="mdi mdi-close"></i><span class="nav-text close-menu-icon">Close</span>
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <ul class="bottom">
+        <li>
+          <a href="">
+            <i class="mdi mdi-help-circle"></i><span class="nav-text">{{'label.app.help' | translate}}</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="mdi mdi-power"></i><span class="nav-text">{{'label.app.logout' | translate}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+</template>

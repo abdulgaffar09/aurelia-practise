@@ -1,0 +1,21 @@
+.header{
+  background-color: #1f9ea1;  
+}
+.header h1{
+  font-family: ProximaNova;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+  color: #ffffff;
+}
+.header-box{
+  text-align: center;
+  border-bottom: 1px solid #d8d8d8;
+}
+.images-gallery{
+  height: 85%;
+  width: 80%;
+}
+h4.job-category{
+  font-family: ProximaNova !important;
+}

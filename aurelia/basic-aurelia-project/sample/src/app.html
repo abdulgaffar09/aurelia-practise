@@ -1,0 +1,37 @@
+<template>
+    <require from="bootstrap/css/bootstrap.css"></require> 
+    <require from="./styles/styles.css"></require> 
+    <require from="./myHeader/myHeader"></require> 
+    <require from="./sideBar/sidebar"></require>
+    <require from="./updateContent/updateContent"></require>  
+    <require from="./listImages/listimages"></require> 
+    <div class="row header-box">
+      <div class="col-lg-3 ">
+        <img src="../images/1.png" alt="P">
+      </div>
+      <my-header class="col-lg-9 header"></my-header>
+    </div>     
+    <div class="row">
+      <div class="col-lg-3">
+          <side-bar></side-bar>
+      </div>
+        <div class="col-lg-9  bg-faded text-muted">
+          <div class="container row ">
+            <h4 class="job-category">Job Category</h4>
+            <div class="col-lg-12 ml-2 mt-3 card card-block">
+                <p>Hello this is dummy</p>
+            </div>
+            <div class="col-lg-12 ml-2 mt-3 card card-block">
+                <update-content></update-content>
+            </div>
+            <div class="col-lg-12 ml-2 mt-3 card card-block">
+                <list-images></list-images>
+            </div>
+          
+          </div>
+         
+        </div>
+  </div>
+ 
+  
+</template>

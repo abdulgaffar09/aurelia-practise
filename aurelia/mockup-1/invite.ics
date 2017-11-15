@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Calcutta
+X-LIC-LOCATION:Asia/Calcutta
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:+0530
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Calcutta:20170111T203000
+DTEND;TZID=Asia/Calcutta:20170111T213000
+RRULE:FREQ=WEEKLY;INTERVAL=1
+DTSTAMP:20171114T183414Z
+ORGANIZER;CN=Sivanand Akella:mailto:siva.akella@phenompeople.com
+UID:9DAA4AE7-FCC9-4075-8DB6-F6F55343C2B7
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=abdul.gaffar@phenompeople.com;X-NUM-GUESTS=0:mailto:abdul.gaffar@ph
+ enompeople.com
+CREATED:20170111T122603Z
+DESCRIPTION:I have deleted all old Product Architecture meeting invites and
+  created new one. This also has GTM ID \n\nhttps://global.gotomeeting.com/j
+ oin/687437037\nDial +1 (872) 240-3212\nMeeting ID: 687-437-037\n\nProduct A
+ rchitecture review calendar: https://phenompeople.atlassian.net/wiki/displa
+ y/PRDA/Review+calendar\n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nPlease do not edit this section o
+ f the description.\n\nView your event at https://www.google.com/calendar/ev
+ ent?action=VIEW&eid=Xzc1MjQyZzlrODUyamViYTY4ZDFqaWI5azYwcmphYjlvOGgxM2NiYTY
+ 2cDMzYWQ5ajZncGs2Y2kyNnMgYWJkdWwuZ2FmZmFyQHBoZW5vbXBlb3BsZS5jb20&tok=Mjgjc2
+ l2YS5ha2VsbGFAcGhlbm9tcGVvcGxlLmNvbTc4ZmEwZTM2MjQ2ZGE1YzA2N2JkYTg0NzFjYzY3Z
+ TcxODhiNGUyODk&ctz=UTC&hl=en.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20171114T183411Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Product Architecture review
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
